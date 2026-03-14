@@ -34,6 +34,7 @@ def get_access_token():
         "refresh_token": REFRESH_TOKEN,
         "grant_type": "refresh_token",
     })
+    print(res.status_code, res.json())  # add this
     return res.json()["access_token"]
 
 
@@ -67,3 +68,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
