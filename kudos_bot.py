@@ -6,6 +6,9 @@ CLIENT_ID = os.environ["STRAVA_CLIENT_ID"]
 CLIENT_SECRET = os.environ["STRAVA_CLIENT_SECRET"]
 REFRESH_TOKEN = os.environ["STRAVA_REFRESH_TOKEN"]
 
+print("ID:", CLIENT_ID[:4], "SECRET:", CLIENT_SECRET[:4], "TOKEN:", REFRESH_TOKEN[:4])
+
+
 # Replace with your friends Strava athlete IDs
 FRIEND_IDS = [
     33838225,
