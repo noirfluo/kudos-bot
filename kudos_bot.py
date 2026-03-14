@@ -34,11 +34,13 @@ def get_following(token):
             params={"per_page": 200, "page": page},
         )
         data = res.json()
-        if not data:
+        print(res.status_code, data)  # <-- added
+        if not data or isinstance(data, dict):
             break
         athletes.extend([a["id"] for a in data])
         page += 1
     return athletes
+
 
 LOOKBACK_HOURS = 2
 
