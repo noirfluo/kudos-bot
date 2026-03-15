@@ -1,7 +1,7 @@
 import requests
 
-CLIENT_ID = "211850"
-CLIENT_SECRET = "ee74c2d6852014c4e6f658a9bce4e2c963be83b8"
+CLIENT_ID = input("Client ID: ")
+CLIENT_SECRET = input("Client Secret: ")
 
 url = (
     "https://www.strava.com/oauth/authorize"
