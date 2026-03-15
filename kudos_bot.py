@@ -29,12 +29,12 @@ def get_following(token):
     page = 1
     while True:
         res = requests.get(
-            "https://www.strava.com/api/v3/athletes/following",
+            "https://www.strava.com/api/v3/athlete/following",
             headers={"Authorization": "Bearer {}".format(token)},
             params={"per_page": 200, "page": page},
         )
         data = res.json()
-        print(res.status_code, data)  # <-- added
+        print(res.status_code, data)
         if not data or isinstance(data, dict):
             break
         athletes.extend([a["id"] for a in data])
